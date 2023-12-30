@@ -7,32 +7,205 @@
     <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <header>
-      <div class="container row">
-        <button class="nav-toggle" aria-label="open navigation">
-          <span class="hamburger"></span>
-        </button>
-        <a class="logo" href="#">
-          <img src="img/logo.svg" alt="Jamie Pham" />
-        </a>
-        <nav class="nav">
-          <ul class="nav__list nav__list--primary">
-            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Projects</a>
-            </li>
-            <li class="nav__item"><a href="#" class="nav__link">Resume</a></li>
-          </ul>
-        </nav>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <nav class="header__content">
+            <a href="#" class="header__branding">Jamie Pham</a>
+            <ul class="header__main">
+              <li class="header__item">
+                <a href="#" class="header__link">About</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link">Projects</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link">Contact</a>
+              </li>
+            </ul>
+            <div class="header__hamburger">
+              <span class="header__hamburger-bar"></span>
+              <span class="header__hamburger-bar"></span>
+              <span class="header__hamburger-bar"></span>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
-    <section id="home"></section>
-    <section id="about"></section>
-    <section id="projects"></section>
-    <section id="contact"></section>
+    <section id="hero">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__heading">Hello, I'm Jamie Pham!</h1>
+          <img class="hero__image" src="img/jamie-pham.jpg" alt="Jamie Pham" />
+          <p class="hero__main-text">
+            I am a self-taught Front End Web Developer that builds websites with
+            a focus on responsive design and user experience.
+          </p>
+          <div class="hero__cta">
+            <button type="button" class="project-btn">Projects</button>
+            <button type="button" class="resume-btn">Resume</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about-me">
+      <div class="container">
+        <h2 class="about-me__header">About Me</h2>
+        <div class="about-me__container">
+          <p class="about-me__para">
+            I am a self-taught Front End Web Developer that builds websites with
+            a focus on responsive design and user experience. As a self-taught
+            Front End Web Developer, I am committed to staying up to date with
+            industry trends and best practices, while learning and adapting to
+            new technologies. I have a Computer Science background with work
+            experience in the IT sector. Now I am looking to fully transition to
+            a front end web development role to utilize my problem solving and
+            critical thinking skills to deliver innovative solutions.
+          </p>
+        </div>
+        <h3>Skills</h3>
+        <div class="skills__grid">
+          <div class="skill"><img src="img/html.png" alt="HTML" />HTML</div>
+
+          <div class="skill"><img src="img/css.png" alt="CSS" />CSS</div>
+          <div class="skill">
+            <img src="img/javascript.png" alt="Javascript" />JavaScript
+          </div>
+          <div class="skill">
+            <img src="img/bootstrap.png" alt="Bootstrap" />Bootstrap
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+        <h2 class="projects__container">Projects</h2>
+        <div class="projects__grid">
+          <div class="project__container">
+            <h4 class="project__title">To Do List App</h4>
+            <img
+              class="project__image"
+              src="img/To Do List App Thumbnail.png"
+              alt="To Do List App"
+            />
+            <div class="project__buttons">
+              <button type="button">View Code</button>
+              <button type="button">Live Preview</button>
+            </div>
+          </div>
+          <div class="project__container">
+            <h4 class="project__title">Weather App</h4>
+            <img
+              class="project__image"
+              src="img/Weather App Thumbnail.png"
+              alt="Weather App"
+            />
+            <div class="project__buttons">
+              <button type="button">View Code</button>
+              <button type="button">Live Preview</button>
+            </div>
+          </div>
+          <div class="project__container">
+            <h4 class="project__title">Calculator App</h4>
+            <img
+              class="project__image"
+              src="img/Calculator App Thumbnail.png"
+              alt="Calculator App"
+            />
+            <div class="project__buttons">
+              <button type="button">View Code</button>
+              <button type="button">Live Preview</button>
+            </div>
+          </div>
+          <div class="project__container">
+            <h4 class="project__title">Age Calculator App</h4>
+            <img
+              class="project__image"
+              src="img/Age Calculator App Thumbnail.png"
+              alt="Age Calculator App"
+            />
+            <div class="project__buttons">
+              <button type="button">View Code</button>
+              <button type="button">Live Preview</button>
+            </div>
+          </div>
+          <div class="project__container">
+            <h4 class="project__title">Rock Paper Scissors App</h4>
+            <img
+              class="project__image"
+              src="img/Rock Paper Scissors App Thumbnail.png"
+              alt="Rock Paper Scissors App"
+            />
+            <div class="project__buttons">
+              <button type="button">View Code</button>
+              <button type="button">Live Preview</button>
+            </div>
+          </div>
+          <div class="project__container">
+            <h4 class="project__title">Etch A Sketch App</h4>
+            <img
+              class="project__image"
+              src="img/Etch A Sketch Thumbnail.png"
+              alt="Etch A Sketch App"
+            />
+            <div class="project__buttons">
+              <button type="button">View Code</button>
+              <button type="button">Live Preview</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact__container"></div>
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="contact__left"
+      >
+        <div class="contact__left-title">
+          <h2 class="contact__title">Get in touch</h2>
+          <hr />
+        </div>
+        <input
+          type="hidden"
+          name="access_key"
+          value="0be2a3f0-6566-4b62-a01d-d4b5a6d4eae3"
+        />
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Your Name"
+          class="contact-inputs"
+          required
+        />
+        <label for="email">Email</label>
+
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Your Email"
+          class="contact-inputs"
+          required
+        />
+        <label for="message">Message</label>
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Your Message"
+          class="contact-inputs"
+          required
+        ></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
     <footer>
-      <div class="container row"></div>
+      <div class="container"></div>
     </footer>
     <script src="script.js"></script>
   </body>

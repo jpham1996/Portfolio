@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -5,177 +10,264 @@
 }
 
 body {
-  margin: 0;
-  font-family: "Times New Roman", "Arial";
-  font-size: 1.3rem;
+  font-family: sans-serif, Arial;
+  text-align: center;
 }
 
-img {
-  max-width: 100%;
+/* Start of NAV  */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #98dbc6;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 .container {
   width: 80%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   /* added for nav-toggle positioning */
   position: relative;
 }
 
 .row {
   display: flex;
-  flex-direction: row;
 }
 
-/* Start of First Section */
-
-header {
-  background: #2e323f;
-  padding-top: 1em;
-  text-align: center;
-}
-
-.nav {
+.header__content {
   width: 100%;
-}
-
-.nav-toggle {
-  cursor: pointer;
-  border: 0;
-  width: 2.5em;
-  height: 2.5em;
-  padding: 0em;
-  border-radius: 50%;
-  background: #072a2d;
-  color: white;
-  transition: opacity 250ms ease;
-
-  position: absolute;
-  left: 0;
-}
-
-.nav-toggle:focus,
-.nav-toggle:hover {
-  opacity: 0.75;
-}
-
-.hamburger {
-  width: 50%;
-  position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-  display: block;
-  margin: 0 auto;
-  height: 3px;
-  background: white;
-}
-
-.hamburger::before,
-.hamburger::after {
-  content: "";
-  width: 100%;
-}
-
-.hamburger::before {
-  transform: translateY(-6px);
-}
-
-.hamburger::after {
-  transform: translateY(3px);
-}
-
-/* made changes here from video
- to make it more accessible.
- 
- Works the same :) */
-.nav {
-  visibility: hidden;
-  height: 0;
-  position: absolute;
-  font-size: 1rem;
-}
-
-.nav--visible {
-  visibility: visible;
-  height: auto;
-  position: relative;
-}
-
-.nav__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.nav__item {
-  margin-top: 0.75em;
-}
-
-.nav__link {
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.nav__link--button {
-  padding: 0.25em 0.75em;
-  background: #fff;
-  color: #23424a;
-  border-radius: 100px;
-}
-
-.nav__link:hover,
-.nav__link:focus {
-  opacity: 0.65;
-}
-
-.nav__list--primary {
-  margin-bottom: 2em;
-}
-
-.logo {
-  height: 30px;
+  min-height: 70px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media (max-width: 1000px) {
-  .main {
-    text-align: center;
-    margin: 0 auto;
-  }
+.header__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
 
-  .row {
+.header__branding {
+  font-size: 2rem;
+}
+
+.header__hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.header__hamburger-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  background-color: black;
+}
+
+@media (max-width: 1024px) {
+  .header__hamburger {
     display: block;
   }
 
-  .sidebar {
-    width: 50%;
+  .header__hamburger.active .header__hamburger-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__hamburger.active .header__hamburger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .header__hamburger.active .header__hamburger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .header__main {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #98dbc6;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .header__item {
+    margin: 16px 0;
+  }
+
+  .header__main.active {
+    left: 0;
   }
 }
 
-@media (min-width: 800px) {
-  .nav-toggle {
-    display: none;
-  }
+/* Start of First Section (Home) */
 
-  .nav {
-    visibility: visible;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: auto;
-    position: relative;
-  }
+#hero {
+  margin-top: 4.375em;
+  border: 1px solid black;
+}
 
-  .nav__list {
-    display: flex;
-    margin: 0;
-  }
+.hero__heading {
+  font-size: 4.25rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
 
-  .nav__item {
-    margin: 0 0 0 1.5em;
+.hero__image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+.hero__main-text {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.project-btn {
+  padding: 1em 2em;
+  font-size: 1rem;
+  border: none;
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+  margin: 0.5em;
+}
+
+.resume-btn {
+  padding: 1em 2em;
+  font-size: 1rem;
+  border: none;
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+  margin: 0.5em;
+}
+
+/* End of First Section (Home) */
+
+/* Start of Second Section (About) */
+
+.about-me__container {
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+
+.skill > img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* End of Second Section (About) */
+
+/* Start of Third Section (Project) */
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+}
+
+.project__container {
+  display: block;
+  margin: 0 auto;
+}
+
+.project__image {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  background-size: cover;
+}
+
+/* End of Third Section (Project) */
+
+/* Start of Fourth Section (Contact) */
+
+.contact__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact__left-title h2 {
+  font-weight: 600;
+  color: #a363aa;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.contact__left-title hr {
+  border: none;
+  height: 5px;
+  background-color: #a363aa;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-inputs {
+  width: 400px;
+  height: 50px;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 10px;
+}
+
+.contact-inputs + textarea {
+  resize: none;
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+
+.contact-inputs:focus {
+  border: 2px solid #ff994f;
+}
+
+.contacts-inputs::placeholder {
+  color: #a9a9a9;
+}
+
+.contact__left button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* End of Fourth Section (Contact) */
+
+@media (max-width: 768px) {
+  .contact-inputs {
+    width: 80vw;
   }
 }
