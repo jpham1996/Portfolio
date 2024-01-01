@@ -14,13 +14,13 @@
             <a href="#" class="header__branding">Jamie Pham</a>
             <ul class="header__main">
               <li class="header__item">
-                <a href="#" class="header__link">About</a>
+                <a href="#about" class="header__link">About</a>
               </li>
               <li class="header__item">
-                <a href="#" class="header__link">Projects</a>
+                <a href="#projects" class="header__link">Projects</a>
               </li>
               <li class="header__item">
-                <a href="#" class="header__link">Contact</a>
+                <a href="#contact" class="header__link">Contact</a>
               </li>
             </ul>
             <div class="header__hamburger">
@@ -35,26 +35,28 @@
     <section id="hero">
       <div class="container">
         <div class="hero__content">
-          <h1 class="hero__heading">Hello, I'm Jamie Pham!</h1>
+          <h2 class="hero__heading">Hello, I'm Jamie Pham!</h2>
           <img class="hero__image" src="img/jamie-pham.jpg" alt="Jamie Pham" />
           <p class="hero__main-text">
-            I am a self-taught Front End Web Developer that builds websites with
-            a focus on responsive design and user experience.
+            A self-taught Front End Web Developer that builds websites with a
+            focus on responsive design and user experience.
           </p>
           <div class="hero__cta">
-            <button type="button" class="project-btn">Projects</button>
-            <button type="button" class="resume-btn">Resume</button>
+            <a href="download/Jamie's Resume.pdf" download="Jamie Pham's Resume"
+              ><button type="button" class="resume-btn">Resume</button></a
+            >
           </div>
         </div>
       </div>
     </section>
-    <section id="about-me">
+    <hr />
+    <section id="about">
       <div class="container">
-        <h2 class="about-me__header">About Me</h2>
+        <h2 class="about-me-text__header">About Me</h2>
         <div class="about-me__container">
           <p class="about-me__para">
-            I am a self-taught Front End Web Developer that builds websites with
-            a focus on responsive design and user experience. As a self-taught
+            A self-taught Front End Web Developer that builds websites with a
+            focus on responsive design and user experience. As a self-taught
             Front End Web Developer, I am committed to staying up to date with
             industry trends and best practices, while learning and adapting to
             new technologies. I have a Computer Science background with work
@@ -63,99 +65,142 @@
             critical thinking skills to deliver innovative solutions.
           </p>
         </div>
-        <h3>Skills</h3>
+        <h3 class="skills-text__header">Skills</h3>
         <div class="skills__grid">
-          <div class="skill"><img src="img/html.png" alt="HTML" />HTML</div>
-
-          <div class="skill"><img src="img/css.png" alt="CSS" />CSS</div>
           <div class="skill">
-            <img src="img/javascript.png" alt="Javascript" />JavaScript
+            <img src="img/html-icon.svg" alt="HTML" />HTML
+          </div>
+
+          <div class="skill"><img src="img/CSS3-icon.svg" alt="CSS" />CSS</div>
+          <div class="skill">
+            <img src="img/javascript-icon.svg" alt="Javascript" />JavaScript
           </div>
           <div class="skill">
-            <img src="img/bootstrap.png" alt="Bootstrap" />Bootstrap
+            <img src="img/bootstrap-icon.svg" alt="Bootstrap" />Bootstrap
+          </div>
+          <div class="skill">
+            <img src="img/nodejs-icon.svg" alt="NodeJS" />NodeJS
+          </div>
+          <div class="skill">
+            <img src="img/expressjs-icon.svg" alt="ExpressJS" />ExpressJS
           </div>
         </div>
       </div>
     </section>
+    <hr />
     <section id="projects">
       <div class="container">
         <h2 class="projects__container">Projects</h2>
         <div class="projects__grid">
           <div class="project__container">
             <h4 class="project__title">To Do List App</h4>
+            <hr class="project__underline" />
             <img
-              class="project__image"
+              class="project-image"
               src="img/To Do List App Thumbnail.png"
               alt="To Do List App"
             />
             <div class="project__buttons">
-              <button type="button">View Code</button>
-              <button type="button">Live Preview</button>
+              <a href="https://github.com/jpham1996/To-Do-List-Application"
+                ><button type="button">View Code</button></a
+              >
+              <a href="https://silly-pie-3c2ac5.netlify.app/"
+                ><button type="button">Live View</button></a
+              >
             </div>
           </div>
           <div class="project__container">
             <h4 class="project__title">Weather App</h4>
+            <hr class="project__underline" />
+
             <img
-              class="project__image"
+              class="project-image"
               src="img/Weather App Thumbnail.png"
               alt="Weather App"
             />
             <div class="project__buttons">
-              <button type="button">View Code</button>
-              <button type="button">Live Preview</button>
+              <a href="https://github.com/jpham1996/Weather-Application"
+                ><button type="button">View Code</button></a
+              >
+              <a href="https://aesthetic-concha-4c78e2.netlify.app/"
+                ><button type="button">Live View</button></a
+              >
             </div>
           </div>
           <div class="project__container">
             <h4 class="project__title">Calculator App</h4>
+            <hr class="project__underline" />
             <img
-              class="project__image"
+              class="project-image"
               src="img/Calculator App Thumbnail.png"
               alt="Calculator App"
             />
             <div class="project__buttons">
-              <button type="button">View Code</button>
-              <button type="button">Live Preview</button>
+              <a href="https://github.com/jpham1996/Calculator-Application"
+                ><button type="button">View Code</button></a
+              >
+              <a href="https://zippy-biscuit-ef1958.netlify.app"
+                ><button type="button">Live View</button></a
+              >
             </div>
           </div>
           <div class="project__container">
             <h4 class="project__title">Age Calculator App</h4>
+            <hr class="project__underline" />
+
             <img
-              class="project__image"
+              class="project-image"
               src="img/Age Calculator App Thumbnail.png"
               alt="Age Calculator App"
             />
             <div class="project__buttons">
-              <button type="button">View Code</button>
-              <button type="button">Live Preview</button>
+              <a href="https://github.com/jpham1996/Age-Calculator-Application"
+                ><button type="button">View Code</button></a
+              >
+              <a href="https://sparkling-begonia-2bdbbb.netlify.app/"
+                ><button type="button">Live View</button></a
+              >
             </div>
           </div>
           <div class="project__container">
             <h4 class="project__title">Rock Paper Scissors App</h4>
+            <hr class="project__underline" />
+
             <img
-              class="project__image"
+              class="project-image"
               src="img/Rock Paper Scissors App Thumbnail.png"
               alt="Rock Paper Scissors App"
             />
             <div class="project__buttons">
-              <button type="button">View Code</button>
-              <button type="button">Live Preview</button>
+              <a href="https://github.com/jpham1996/Rock-Paper-Scissors-Game"
+                ><button type="button">View Code</button></a
+              >
+              <a href="https://cozy-creponne-aa9818.netlify.app/"
+                ><button type="button">Live View</button></a
+              >
             </div>
           </div>
           <div class="project__container">
             <h4 class="project__title">Etch A Sketch App</h4>
+            <hr class="project__underline" />
             <img
-              class="project__image"
+              class="project-image"
               src="img/Etch A Sketch Thumbnail.png"
               alt="Etch A Sketch App"
             />
             <div class="project__buttons">
-              <button type="button">View Code</button>
-              <button type="button">Live Preview</button>
+              <a href="https://github.com/jpham1996/Etch-A-Sketch"
+                ><button type="button">View Code</button></a
+              >
+              <a href="https://sensational-llama-f75751.netlify.app/"
+                ><button type="button">Live View</button></a
+              >
             </div>
           </div>
         </div>
       </div>
     </section>
+    <hr />
 
     <section id="contact">
       <div class="contact__container"></div>
@@ -165,7 +210,7 @@
         class="contact__left"
       >
         <div class="contact__left-title">
-          <h2 class="contact__title">Get in touch</h2>
+          <h2 class="contact__title">Contact Me</h2>
           <hr />
         </div>
         <input
@@ -204,8 +249,56 @@
         <button type="submit">Submit</button>
       </form>
     </section>
-    <footer>
-      <div class="container"></div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__content-1">
+            <h2 class="footer__heading">Jamie Pham</h2>
+            <p>
+              A self-taught Front End Web Developer that builds websites with a
+              focus on responsive design and user experience.
+            </p>
+          </div>
+          <div class="footer__content-2">
+            <h2 class="footer__heading">Social</h2>
+            <ul class="social__container">
+              <li class="">
+                <a
+                  class="social-link"
+                  href="https://www.linkedin.com/in/jamie-pham-wit/"
+                  ><img
+                    class="social-icon"
+                    src="img/linkedin-icon.svg"
+                    alt="Linkedin"
+                /></a>
+              </li>
+              <li>
+                <a class="social-link" href="https://github.com/jpham1996/"
+                  ><img
+                    class="social-icon"
+                    src="img/github-icon.svg"
+                    alt="GitHub"
+                /></a>
+              </li>
+              <li>
+                <a
+                  class="social-link"
+                  href="https://www.instagram.com/jfamxd/?hl=en"
+                  ><img
+                    social-icon
+                    src="img/instagram-icon.svg"
+                    alt="Instagram"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright__container">
+          <p>
+            &copy Copyright <span id="currentYear"></span>. Made by Jamie Pham
+          </p>
+        </div>
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>
