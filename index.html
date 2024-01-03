@@ -52,9 +52,9 @@
     <hr />
     <section id="about">
       <div class="container">
-        <h2 class="about-me-text__header">About Me</h2>
-        <div class="about-me__container">
-          <p class="about-me__para">
+        <h2 class="about__header">About Me</h2>
+        <div class="about__container">
+          <p class="about__para">
             A self-taught Front End Web Developer that builds websites with a
             focus on responsive design and user experience. As a self-taught
             Front End Web Developer, I am committed to staying up to date with
@@ -65,24 +65,45 @@
             critical thinking skills to deliver innovative solutions.
           </p>
         </div>
-        <h3 class="skills-text__header">Skills</h3>
-        <div class="skills__grid">
+        <h3 class="skills__header">Skills</h3>
+
+        <div class="skills__flex">
           <div class="skill">
-            <img src="img/html-icon.svg" alt="HTML" />HTML
+            <img class="skill-image" src="img/html-icon.svg" alt="HTML" />
+            <span class="skill-text">HTML</span>
           </div>
 
-          <div class="skill"><img src="img/CSS3-icon.svg" alt="CSS" />CSS</div>
           <div class="skill">
-            <img src="img/javascript-icon.svg" alt="Javascript" />JavaScript
+            <img class="skill-image" src="img/CSS3-icon.svg" alt="CSS" />
+            <span class="skill-text">CSS</span>
           </div>
           <div class="skill">
-            <img src="img/bootstrap-icon.svg" alt="Bootstrap" />Bootstrap
+            <img
+              class="skill-image"
+              src="img/javascript-icon.svg"
+              alt="JavaScript"
+            />
+            <span class="skill-text">JavaScript</span>
           </div>
           <div class="skill">
-            <img src="img/nodejs-icon.svg" alt="NodeJS" />NodeJS
+            <img
+              class="skill-image"
+              src="img/bootstrap-icon.svg"
+              alt="Bootstrap"
+            />
+            <span class="skill-text">Bootstrap</span>
           </div>
           <div class="skill">
-            <img src="img/expressjs-icon.svg" alt="ExpressJS" />ExpressJS
+            <img class="skill-image" src="img/nodejs-icon.svg" alt="NodeJS" />
+            <span class="skill-text">NodeJS</span>
+          </div>
+          <div class="skill">
+            <img
+              class="skill-image"
+              src="img/expressjs-icon.svg"
+              alt="ExpressJS"
+            />
+            <span class="skill-text">ExpressJS</span>
           </div>
         </div>
       </div>
@@ -203,51 +224,52 @@
     <hr />
 
     <section id="contact">
-      <div class="contact__container"></div>
-      <form
-        action="https://api.web3forms.com/submit"
-        method="POST"
-        class="contact__left"
-      >
-        <div class="contact__left-title">
-          <h2 class="contact__title">Contact Me</h2>
-          <hr />
-        </div>
-        <input
-          type="hidden"
-          name="access_key"
-          value="0be2a3f0-6566-4b62-a01d-d4b5a6d4eae3"
-        />
-        <label for="name">Name</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Your Name"
-          class="contact-inputs"
-          required
-        />
-        <label for="email">Email</label>
+      <div class="contact__container">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="contact__form"
+        >
+          <div class="contact__title-container">
+            <h2 class="contact__title">Contact Me</h2>
+            <hr class="contact__title-underline" />
+          </div>
+          <input
+            type="hidden"
+            name="access_key"
+            value="0be2a3f0-6566-4b62-a01d-d4b5a6d4eae3"
+          />
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your Name"
+            class="contact-inputs"
+            required
+          />
+          <label for="email">Email</label>
 
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Your Email"
-          class="contact-inputs"
-          required
-        />
-        <label for="message">Message</label>
-        <textarea
-          name="message"
-          id="message"
-          placeholder="Your Message"
-          class="contact-inputs"
-          required
-        ></textarea>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email"
+            class="contact-inputs"
+            required
+          />
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Your Message"
+            class="contact-inputs"
+            required
+          ></textarea>
 
-        <button type="submit">Submit</button>
-      </form>
+          <button class="contact-button" type="submit">Submit</button>
+        </form>
+      </div>
     </section>
     <footer class="footer">
       <div class="container">
@@ -275,7 +297,7 @@
               <li>
                 <a class="social-link" href="https://github.com/jpham1996/"
                   ><img
-                    class="social-icon"
+                    class="social-icon social-icon--white"
                     src="img/github-icon.svg"
                     alt="GitHub"
                 /></a>

@@ -11,6 +11,7 @@
 
 body {
   font-family: sans-serif, Arial;
+  text-align: center;
 }
 
 /* Start of NAV  */
@@ -19,7 +20,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #98dbc6;
+  background-color: black;
+  z-index: 1;
 }
 
 li {
@@ -27,7 +29,7 @@ li {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -41,6 +43,7 @@ a {
 
 .row {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -74,51 +77,14 @@ a {
   height: 3px;
   margin: 5px 0;
   transition: all 0.3s ease;
-  background-color: black;
-}
-
-@media (max-width: 1024px) {
-  .header__hamburger {
-    display: block;
-  }
-
-  .header__hamburger.active .header__hamburger-bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .header__hamburger.active .header__hamburger-bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .header__hamburger.active .header__hamburger-bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .header__main {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: #98dbc6;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-  }
-
-  .header__item {
-    margin: 16px 0;
-  }
-
-  .header__main.active {
-    left: 0;
-  }
+  background-color: white;
 }
 
 /* Start of First Section (Home) */
 
 #hero {
   margin-top: 4.375em;
+  padding: 30px 0;
 }
 
 .hero__heading {
@@ -146,68 +112,80 @@ a {
   background-color: purple;
   color: white;
   cursor: pointer;
-  margin: 0.5em;
+  margin: 0.5em 0;
 }
 
 /* End of First Section (Home) */
 
 /* Start of Second Section (About) */
 
-#about-me {
-  margin-top: 4.375em;
+#about {
+  /* margin-top: 4.375em; */
+  background-color: #d3d3d3;
+  padding: 30px 0;
 }
 
-.about-me__container {
+.about__container {
   margin-bottom: 30px;
 }
 
-.about-me-text__header {
+.about__header {
   text-decoration: underline;
+  margin-bottom: 30px;
 }
 
-.skills-text__header {
+.skills__header {
   text-decoration: underline;
+  margin-bottom: 30px;
 }
 
-.skills__grid {
-  display: grid;
-  grid-template-columns: repeat(6, auto);
+.skills__flex {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .skill > img {
   display: block;
   margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 /* End of Second Section (About) */
 
 /* Start of Third Section (Project) */
 
+#projects {
+  background-color: #d3d3d3;
+  padding: 30px 0;
+}
+
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(3, auto);
+  justify-content: space-between;
+  grid-template-columns: repeat(2, auto);
 }
 
 .project__container {
-  display: block;
   margin: 25px auto;
   border: 5px double black;
+}
+
+.project__title {
+  text-align: center;
 }
 
 .project__underline {
   border: none;
   height: 3px;
-  margin: auto;
   background-color: black;
-  margin-bottom: 5px;
 }
 
 .project-image {
   width: 100%;
   max-width: 300px;
   height: 300px;
-  background-size: cover;
+  margin: 0;
 }
 
 .project__buttons {
@@ -224,65 +202,72 @@ a {
 
 /* Start of Fourth Section (Contact) */
 
+#contact {
+  background-color: #d3d3d3;
+  padding: 30px 0;
+}
+
 .contact__container {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.contact__left {
+.contact__form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-.contact__left-title h2 {
+.contact__title {
   font-weight: 600;
-  color: #a363aa;
+  color: black;
   font-size: 40px;
   margin-bottom: 5px;
 }
 
-.contact__left-title hr {
+.contact__title-underline {
   border: none;
   height: 5px;
-  background-color: #a363aa;
+  background-color: black;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .contact-inputs {
   width: 400px;
   height: 50px;
   outline: none;
+  border: none;
   padding-left: 25px;
   font-weight: 500;
   color: #666;
   border-radius: 10px;
 }
 
-.contact-inputs + textarea {
+textarea {
   resize: none;
-  height: 140px;
   padding-top: 15px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .contact-inputs:focus {
-  border: 2px solid #ff994f;
+  border: 2px solid black;
 }
 
 .contacts-inputs::placeholder {
   color: #a9a9a9;
 }
 
-.contact__left button {
-  padding: 15px 30px;
+.contact-button {
+  padding: 1em 2em;
   font-size: 1rem;
   border: none;
-  border-radius: 50px;
+  background-color: purple;
+  color: white;
   cursor: pointer;
+  margin: 0.5em 0;
 }
 
 /* End of Fourth Section (Contact) */
@@ -290,7 +275,9 @@ a {
 /* Start of Footer */
 
 .footer {
+  background-color: black;
   padding: 3.125rem;
+  color: white;
 }
 
 .footer__content {
@@ -318,6 +305,11 @@ a {
   gap: 15px;
 }
 
+.social-icon--white {
+  background-color: white;
+  border-radius: 10px;
+}
+
 .copyright__container {
   display: flex;
   padding: 4em 0;
@@ -327,8 +319,78 @@ a {
 
 /* End of Footer */
 
-@media (max-width: 768px) {
-  .contact-inputs {
-    width: 80vw;
+@media (min-width: 1200px) {
+  .projects__grid {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__hamburger {
+    display: block;
+  }
+
+  .header__hamburger.active .header__hamburger-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__hamburger.active .header__hamburger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .header__hamburger.active .header__hamburger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .header__main {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .header__item {
+    margin: 16px 0;
+  }
+
+  .header__main.active {
+    left: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    text-align: center;
+  }
+
+  .projects__grid {
+    display: block;
+  }
+
+  .project-image {
+    max-width: 100%;
+  }
+
+  .footer__content {
+    display: block;
+  }
+
+  .footer__content-1 {
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .social__container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
   }
 }
