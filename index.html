@@ -14,29 +14,30 @@
             <a href="#" class="header__branding">Jamie Pham</a>
             <ul class="header__main">
               <li class="header__item">
-                <a href="#about" class="header__link">About</a>
+                <a href="#about" class="header-link">About</a>
               </li>
               <li class="header__item">
-                <a href="#projects" class="header__link">Projects</a>
+                <a href="#projects" class="header-link">Projects</a>
               </li>
               <li class="header__item">
-                <a href="#contact" class="header__link">Contact</a>
+                <a href="#contact" class="header-link">Contact</a>
               </li>
             </ul>
             <div class="header__hamburger">
-              <span class="header__hamburger-bar"></span>
-              <span class="header__hamburger-bar"></span>
-              <span class="header__hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
             </div>
           </nav>
         </div>
       </div>
     </header>
+
     <section id="hero">
       <div class="container">
         <div class="hero__content">
           <h2 class="hero__heading">Hello, I'm Jamie Pham!</h2>
-          <img class="hero__image" src="img/jamie-pham.jpg" alt="Jamie Pham" />
+          <img class="hero-image" src="img/jamie-pham.jpg" alt="Jamie Pham" />
           <p class="hero__main-text">
             A self-taught Front End Web Developer that builds websites with a
             focus on responsive design and user experience.
@@ -47,9 +48,10 @@
             >
           </div>
         </div>
+        <hr class="hero__hr" />
       </div>
     </section>
-    <hr />
+
     <section id="about">
       <div class="container">
         <h2 class="about__header">About Me</h2>
@@ -66,13 +68,11 @@
           </p>
         </div>
         <h3 class="skills__header">Skills</h3>
-
         <div class="skills__flex">
           <div class="skill">
             <img class="skill-image" src="img/html-icon.svg" alt="HTML" />
             <span class="skill-text">HTML</span>
           </div>
-
           <div class="skill">
             <img class="skill-image" src="img/CSS3-icon.svg" alt="CSS" />
             <span class="skill-text">CSS</span>
@@ -106,15 +106,16 @@
             <span class="skill-text">ExpressJS</span>
           </div>
         </div>
+        <hr class="about__hr" />
       </div>
     </section>
-    <hr />
+
     <section id="projects">
       <div class="container">
-        <h2 class="projects__container">Projects</h2>
+        <h2 class="project__heading">Projects</h2>
         <div class="projects__grid">
           <div class="project__container">
-            <h4 class="project__title">To Do List App</h4>
+            <h4 class="project__title">To Do List</h4>
             <hr class="project__underline" />
             <img
               class="project-image"
@@ -131,9 +132,8 @@
             </div>
           </div>
           <div class="project__container">
-            <h4 class="project__title">Weather App</h4>
+            <h4 class="project__title">Weather</h4>
             <hr class="project__underline" />
-
             <img
               class="project-image"
               src="img/Weather App Thumbnail.png"
@@ -149,7 +149,7 @@
             </div>
           </div>
           <div class="project__container">
-            <h4 class="project__title">Calculator App</h4>
+            <h4 class="project__title">Calculator</h4>
             <hr class="project__underline" />
             <img
               class="project-image"
@@ -166,9 +166,8 @@
             </div>
           </div>
           <div class="project__container">
-            <h4 class="project__title">Age Calculator App</h4>
+            <h4 class="project__title">Age Calculator</h4>
             <hr class="project__underline" />
-
             <img
               class="project-image"
               src="img/Age Calculator App Thumbnail.png"
@@ -184,9 +183,8 @@
             </div>
           </div>
           <div class="project__container">
-            <h4 class="project__title">Rock Paper Scissors App</h4>
+            <h4 class="project__title">Rock Paper Scissors</h4>
             <hr class="project__underline" />
-
             <img
               class="project-image"
               src="img/Rock Paper Scissors App Thumbnail.png"
@@ -202,7 +200,7 @@
             </div>
           </div>
           <div class="project__container">
-            <h4 class="project__title">Etch A Sketch App</h4>
+            <h4 class="project__title">Etch A Sketch</h4>
             <hr class="project__underline" />
             <img
               class="project-image"
@@ -219,64 +217,60 @@
             </div>
           </div>
         </div>
+        <hr />
       </div>
     </section>
-    <hr />
 
     <section id="contact">
-      <div class="contact__container">
-        <form
-          action="https://api.web3forms.com/submit"
-          method="POST"
-          class="contact__form"
-        >
-          <div class="contact__title-container">
-            <h2 class="contact__title">Contact Me</h2>
-            <hr class="contact__title-underline" />
-          </div>
-          <input
-            type="hidden"
-            name="access_key"
-            value="0be2a3f0-6566-4b62-a01d-d4b5a6d4eae3"
-          />
-          <label for="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Your Name"
-            class="contact-inputs"
-            required
-          />
-          <label for="email">Email</label>
-
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Your Email"
-            class="contact-inputs"
-            required
-          />
-          <label for="message">Message</label>
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Your Message"
-            class="contact-inputs"
-            required
-          ></textarea>
-
-          <button class="contact-button" type="submit">Submit</button>
-        </form>
+      <div class="container">
+        <div class="contact__container">
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="contact__form"
+          >
+            <div class="contact__heading-container">
+              <h2 class="contact__heading">Contact Me</h2>
+            </div>
+            <input id="apiKey" type="hidden" name="access_key" />
+            <label class="contact-label" for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your Name"
+              class="contact-inputs"
+              required
+            />
+            <label class="contact-label" for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email"
+              class="contact-inputs"
+              required
+            />
+            <label class="contact-label" for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Your Message"
+              class="contact-inputs"
+              required
+            ></textarea>
+            <button class="contact-button" type="submit">Submit</button>
+          </form>
+        </div>
       </div>
     </section>
+
     <footer class="footer">
       <div class="container">
         <div class="footer__content">
           <div class="footer__content-1">
             <h2 class="footer__heading">Jamie Pham</h2>
-            <p>
+            <p class="footer_para">
               A self-taught Front End Web Developer that builds websites with a
               focus on responsive design and user experience.
             </p>
@@ -302,26 +296,16 @@
                     alt="GitHub"
                 /></a>
               </li>
-              <li>
-                <a
-                  class="social-link"
-                  href="https://www.instagram.com/jfamxd/?hl=en"
-                  ><img
-                    social-icon
-                    src="img/instagram-icon.svg"
-                    alt="Instagram"
-                /></a>
-              </li>
             </ul>
           </div>
         </div>
         <div class="copyright__container">
-          <p>
+          <p class="copyright__para">
             &copy Copyright <span id="currentYear"></span>. Made by Jamie Pham
           </p>
         </div>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

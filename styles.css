@@ -10,8 +10,16 @@
 }
 
 body {
-  font-family: sans-serif, Arial;
+  font-family: "Times New Roman", Arial;
   text-align: center;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  /* added for nav-toggle positioning */
+  position: relative;
 }
 
 /* Start of NAV  */
@@ -31,14 +39,6 @@ li {
 a {
   color: white;
   text-decoration: none;
-}
-
-.container {
-  width: 80%;
-  max-width: 1200px;
-  margin: auto;
-  /* added for nav-toggle positioning */
-  position: relative;
 }
 
 .row {
@@ -63,7 +63,11 @@ a {
 }
 
 .header__branding {
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+.header-link {
+  font-size: 1.5rem;
 }
 
 .header__hamburger {
@@ -71,7 +75,7 @@ a {
   cursor: pointer;
 }
 
-.header__hamburger-bar {
+.hamburger-bar {
   display: block;
   width: 25px;
   height: 3px;
@@ -83,26 +87,28 @@ a {
 /* Start of First Section (Home) */
 
 #hero {
+  padding: 1.875em 0;
   margin-top: 4.375em;
-  padding: 30px 0;
+  background-color: #d3d3d3;
 }
 
 .hero__heading {
   font-size: 4.25rem;
   text-transform: uppercase;
   letter-spacing: 3px;
+  margin-bottom: 1.875rem;
 }
 
-.hero__image {
+.hero-image {
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
   height: auto;
 }
 
 .hero__main-text {
   font-size: 2rem;
   line-height: 1.6;
-  margin-bottom: 30px;
+  margin: 1.875rem 0;
 }
 
 .resume-btn {
@@ -115,28 +121,40 @@ a {
   margin: 0.5em 0;
 }
 
+.hero__hr {
+  margin-top: 1.875em;
+}
+
 /* End of First Section (Home) */
 
 /* Start of Second Section (About) */
 
 #about {
-  /* margin-top: 4.375em; */
   background-color: #d3d3d3;
-  padding: 30px 0;
-}
-
-.about__container {
-  margin-bottom: 30px;
+  padding: 1.875em 0;
 }
 
 .about__header {
-  text-decoration: underline;
-  margin-bottom: 30px;
+  font-weight: 600;
+  color: black;
+  font-size: 2.5rem;
+  margin-bottom: 1.875rem;
+}
+
+.about__container {
+  margin-bottom: 1.875em;
+}
+
+.about__para {
+  font-size: 1.5rem;
+  line-height: 1.6;
 }
 
 .skills__header {
-  text-decoration: underline;
-  margin-bottom: 30px;
+  font-weight: 600;
+  color: black;
+  font-size: 1.875rem;
+  margin-bottom: 1.875rem;
 }
 
 .skills__flex {
@@ -148,7 +166,15 @@ a {
 .skill > img {
   display: block;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 0.625em;
+}
+
+.skill-text {
+  font-size: 1.5rem;
+}
+
+.about__hr {
+  margin-top: 1.875em;
 }
 
 /* End of Second Section (About) */
@@ -157,7 +183,13 @@ a {
 
 #projects {
   background-color: #d3d3d3;
-  padding: 30px 0;
+  padding: 1.875em 0;
+}
+
+.project__heading {
+  font-weight: 600;
+  color: black;
+  font-size: 2.5rem;
 }
 
 .projects__grid {
@@ -167,18 +199,13 @@ a {
 }
 
 .project__container {
-  margin: 25px auto;
+  margin: 1.875em auto;
   border: 5px double black;
 }
 
 .project__title {
   text-align: center;
-}
-
-.project__underline {
-  border: none;
-  height: 3px;
-  background-color: black;
+  font-size: 1.3rem;
 }
 
 .project-image {
@@ -204,13 +231,7 @@ a {
 
 #contact {
   background-color: #d3d3d3;
-  padding: 30px 0;
-}
-
-.contact__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  padding: 1.875em 0;
 }
 
 .contact__form {
@@ -220,19 +241,11 @@ a {
   gap: 20px;
 }
 
-.contact__title {
+.contact__heading {
   font-weight: 600;
   color: black;
-  font-size: 40px;
-  margin-bottom: 5px;
-}
-
-.contact__title-underline {
-  border: none;
-  height: 5px;
-  background-color: black;
-  border-radius: 10px;
-  margin-bottom: 30px;
+  font-size: 2.5rem;
+  margin-bottom: 0.313rem;
 }
 
 .contact-inputs {
@@ -240,20 +253,25 @@ a {
   height: 50px;
   outline: none;
   border: none;
-  padding-left: 25px;
+  padding-left: 1.563em;
   font-weight: 500;
   color: #666;
   border-radius: 10px;
+  font-size: 1rem;
 }
 
 textarea {
   resize: none;
-  padding-top: 15px;
+  padding-top: 0.938em;
   border-radius: 10px;
 }
 
 .contact-inputs:focus {
   border: 2px solid black;
+}
+
+.contact-label {
+  font-size: 1.3rem;
 }
 
 .contacts-inputs::placeholder {
@@ -275,6 +293,7 @@ textarea {
 /* Start of Footer */
 
 .footer {
+  text-align: left;
   background-color: black;
   padding: 3.125rem;
   color: white;
@@ -285,19 +304,24 @@ textarea {
   justify-content: space-between;
 }
 
+.footer__heading {
+  margin-bottom: 1.875rem;
+  font-size: 2.5rem;
+}
+
 .footer__content-1 {
   display: flex;
   flex-direction: column;
   width: 30%;
 }
 
+.footer_para {
+  font-size: 1.5rem;
+}
+
 .footer__content-2 {
   display: flex;
   flex-direction: column;
-}
-
-.footer__heading {
-  margin-bottom: 30px;
 }
 
 .social__container {
@@ -311,13 +335,20 @@ textarea {
 }
 
 .copyright__container {
+  margin-top: 1.875em;
   display: flex;
   padding: 4em 0;
   border-top: 1px solid grey;
   justify-content: center;
 }
 
+.copyright__para {
+  font-size: 1.5rem;
+}
+
 /* End of Footer */
+
+/* Start of Media Queries */
 
 @media (min-width: 1200px) {
   .projects__grid {
@@ -357,7 +388,7 @@ textarea {
   }
 
   .header__item {
-    margin: 16px 0;
+    margin: 1em 0;
   }
 
   .header__main.active {
@@ -385,7 +416,7 @@ textarea {
   .footer__content-1 {
     margin: 0 auto;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 1.875em;
   }
 
   .social__container {
@@ -394,3 +425,5 @@ textarea {
     gap: 15px;
   }
 }
+
+/* End of Media Queries */
