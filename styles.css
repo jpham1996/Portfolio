@@ -254,16 +254,16 @@ a {
   outline: none;
   border: none;
   padding-left: 1.563em;
-  font-weight: 500;
   color: #666;
   border-radius: 10px;
   font-size: 1rem;
+
+  font-family: "Times New Roman", Arial;
 }
 
 textarea {
   resize: none;
   padding-top: 0.938em;
-  border-radius: 10px;
 }
 
 .contact-inputs:focus {
@@ -401,6 +401,14 @@ textarea {
     text-align: center;
   }
 
+  .skills__flex {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: space-between;
+    text-align: center;
+  }
+
   .projects__grid {
     display: block;
   }
@@ -417,6 +425,7 @@ textarea {
     margin: 0 auto;
     width: 100%;
     margin-bottom: 1.875em;
+    text-align: center;
   }
 
   .social__container {
