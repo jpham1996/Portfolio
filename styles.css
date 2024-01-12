@@ -103,10 +103,15 @@ a {
   margin-bottom: 1.875rem;
 }
 
+.hero-text-color--custom {
+  color: rgb(4, 83, 221);
+}
+
 .hero-image {
   width: 100%;
   max-width: 300px;
   height: auto;
+  border-radius: 50%;
 }
 
 .hero__main-text {
@@ -119,7 +124,7 @@ a {
   padding: 1em 2em;
   font-size: 1rem;
   border: none;
-  background-color: purple;
+  background-color: rgb(4, 83, 221);
   color: white;
   cursor: pointer;
   margin: 0.5em 0;
@@ -135,7 +140,7 @@ a {
 
 #about {
   background-color: #d3d3d3;
-  padding: 1.875em 0;
+  padding: 4.375em 0;
 }
 
 .about__header {
@@ -187,7 +192,7 @@ a {
 
 #projects {
   background-color: #d3d3d3;
-  padding: 1.875em 0;
+  padding: 4.375em 0;
 }
 
 .project__heading {
@@ -236,7 +241,7 @@ a {
 
 #contact {
   background-color: #d3d3d3;
-  padding: 1.875em 0;
+  padding: 4.375em 0;
 }
 
 .contact__form {
@@ -286,7 +291,7 @@ textarea {
   padding: 1em 2em;
   font-size: 1rem;
   border: none;
-  background-color: purple;
+  background-color: rgb(4, 83, 221);
   color: white;
   cursor: pointer;
   margin: 0.5em 0;
