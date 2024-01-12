@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Times New Roman", Arial;
   text-align: center;
@@ -327,6 +331,14 @@ textarea {
 .social__container {
   display: flex;
   gap: 15px;
+}
+
+.social-icon {
+  opacity: 0.6;
+}
+
+.social-icon:hover {
+  opacity: 1;
 }
 
 .social-icon--white {
