@@ -49,6 +49,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .header__content {
@@ -70,8 +71,16 @@ a {
   font-size: 1.5rem;
 }
 
+.header__branding:hover {
+  color: rgb(4, 83, 221);
+}
+
 .header-link {
   font-size: 1.5rem;
+}
+
+.header-link:hover {
+  color: rgb(4, 83, 221);
 }
 
 .header__hamburger {
@@ -210,6 +219,9 @@ a {
 .project__container {
   margin: 1.875em auto;
   border: 5px double black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .project__title {
@@ -221,18 +233,38 @@ a {
   width: 100%;
   max-width: 300px;
   height: 300px;
-  margin: 0;
+  flex-grow: 1;
   object-fit: cover;
+  opacity: 1;
 }
 
-.project__buttons {
+.project__container:hover .project-image {
+  opacity: 0.3;
+}
+
+.project__container:hover .project-buttons__container {
+  opacity: 1;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.project__buttons button {
-  width: 100%;
+.project-buttons__container {
+  display: none;
+}
+
+.project-button {
+  padding: 1em 2em;
+  font-size: 1rem;
+  border: none;
+  background-color: rgb(4, 83, 221);
+  color: white;
+  cursor: pointer;
+  margin: 0.5em 0;
 }
 
 /* End of Third Section (Project) */
