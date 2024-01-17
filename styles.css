@@ -225,7 +225,6 @@ a {
 }
 
 .project__title {
-  text-align: center;
   font-size: 1.3rem;
 }
 
@@ -239,7 +238,7 @@ a {
 }
 
 .project__container:hover .project-image {
-  opacity: 0.3;
+  opacity: 0.1;
 }
 
 .project__container:hover .project-buttons__container {
@@ -248,7 +247,7 @@ a {
   flex-direction: column;
   gap: 15px;
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
 }
