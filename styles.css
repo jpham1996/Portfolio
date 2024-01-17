@@ -343,27 +343,7 @@ textarea {
 
 .footer__content {
   display: flex;
-  justify-content: space-between;
-}
-
-.footer__heading {
-  margin-bottom: 1.875rem;
-  font-size: 2.5rem;
-}
-
-.footer__content-1 {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-}
-
-.footer_para {
-  font-size: 1.5rem;
-}
-
-.footer__content-2 {
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
 .social__container {
